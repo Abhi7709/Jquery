@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>jQuery</title>
+
+    <style>
+        .div{
+            border:1px solid black;
+            padding:20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="div">
+        <h1>
+            Jquery Syntax
+        </h1>
+        <p id="id">Lorem ipsum dolor sit amet consectetur adipisicing elit. Totam accusamus, animi fugiat consequatur impedit
+             laboriosam ipsam quo porro quaerat earum maiores ea, aliquid consectetur harum ex asperiores necessitatibus vitae odit!</p>
+    </div>
+    <script src="./js/jquery-3.7.1.js"></script>
+        <script>
+            $(document).ready(function(){
+                $('.div').css('backgroundColor','red')
+                //$('.div').css('color','white')
+                $('#id').css('color','white')
+            })
+
+    </script>
+</body>
+</html>

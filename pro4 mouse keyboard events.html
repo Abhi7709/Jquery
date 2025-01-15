@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>events</title>
+    <style>
+        #box {
+            border: 1px solid black;
+            padding: 20px;
+            ;
+
+        }
+    </style>
+</head>
+
+<body>
+
+    <div id="box">
+        <h2>
+            Events
+        </h2>
+        <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum voluptas iusto qui. Ullam repellendus
+            commodi aliquid aliquam nihil omnis, rerum eligendi repudiandae, libero ipsum placeat, nostrum numquam ab
+            temporibus quisquam?
+        </p>
+        <h3 id="txt"></h3>
+        <img id="img" />
+    </div>
+    <button id="increase">Increment</button>
+    <button id="decrease">Decrement</button>
+    <br><br>
+    <input placeholder="enter value" id="input">
+    <br><br>
+    <button id="btn1">Click</button>
+    <button id="btn2">Double Click</button>
+    <button id="btn3">Right Click</button>
+
+    <script src="./js/jquery-3.7.1.js">
+
+    </script>
+    <script>
+        $(document).ready(function () {
+            let count = 1;
+            $('#btn1').click(function () {
+                $('#box').css('backgroundColor', 'lightBlue')
+            })
+
+            $('#btn2').dblclick(function () {
+                $('#box').css('backgroundColor', 'yellow')
+
+            })
+            $('#btn3').contextmenu(function () {
+                document.getElementById('img').src = 'img/Micky.png'
+                $('img').css('height', '200px')
+            })
+            $('#box').mouseenter(function () {
+                $('#box').css('backgroundColor', 'green')
+            })
+            $('#box').mouseleave(function () {
+                $('#box').css('backgroundColor', 'white')
+            })
+            $('input').keydown(function () {
+                $('#box').css('fontSize', '32px')
+            })
+            $('input').keyup(function () {
+                $('body').css('backgroundColor', 'pink')
+            })
+
+            $("#increase").click(function () {
+                count++;
+                document.getElementById("txt").innerHTML = count
+            })
+
+            $("#decrease").click(function () {
+                count--;
+                document.getElementById("txt").innerHTML = count
+            })
+
+
+
+        })
+    </script>
+
+
+</body>
+
+</html>

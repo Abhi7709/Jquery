@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>form events</title>
+</head>
+<body>
+    <form id="myForm">
+        <input type="text" placeholder="enter a name" id="fullname"/>
+        <br><br>
+        <input type="text" placeholder="enter a email" id="email"/>
+        <br><br>
+        <input type="text" placeholder="enter a address" id="address"/>
+        <br><br>
+        <select id="select">
+            <option>Select City</option>
+            <option>Pune</option>
+            <option>Chennai</option>
+            <option>Mumbai</option>
+            <option>Nashik</option>
+
+        </select>
+        <br><br>
+        <input type="submit" value="submit"/>
+        <br><br>
+        <div id="demo" style="width:100% ; padding: 20px; border: 1px solid red;"></div>
+    </form>
+    <script src="./js/jquery-3.7.1.js"></script>
+
+    <script>
+        $(document).ready(function(){
+            $("#fullname,#email,#address").focus(function(){
+                $(this).css('backgroundColor','yellow')
+
+            })
+            $("#fullname,#email,#address").blur(function(){
+                $(this).css('backgroundColor','grey')
+
+            })
+
+            $('#select').change(function(){
+                $('#select').css('backgroundColor','red')
+            })
+
+            $('#myForm').submit(function(){
+                var x=document.getElementById('fullname').value
+                var y=document.getElementById('email').value
+                alert(`my name is ${x} and emailid is ${y}`)
+                alert('thank you! form is submitted')
+            })
+
+        })
+    </script>
+</body>
+</html>

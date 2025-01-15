@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>clone method</title>
+</head>
+<body>
+   <div id="box">
+    <h2>This is clone Method</h2>
+    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Officiis, facilis!</p>
+
+   </div>
+   <div id="box2">
+    <h2>This is duplicate implementation</h2>
+   </div> 
+   <button id="cloning">CLone Method</button>
+
+   <script src="js/jquery-3.7.1.js">
+
+   </script>
+   <script>
+    $(document).ready(function(){
+        $('#cloning').click(function(){
+            $('#box p').clone().appendTo('#box2')
+        })
+    })
+   </script>
+</body>
+</html>

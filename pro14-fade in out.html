@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>hide show toggle</title>
+</head>
+<body>
+    <div id="box">
+        <h2>Test Box</h2>
+        <p>But I must explain to you how all this mistaken idea of denouncing pleasure
+            amd praising pain was born and I will
+        </p>
+
+    </div><br><br>
+
+    <button id="fadeout">Fadeout</button>
+    <button id="fadein">Fadein</button>
+    <button id="toggle">Toggle</button>
+
+
+
+    <script src="./js/jquery-3.7.1.js"></script>
+    <script>
+
+    $(document).ready(function(){
+        $('#fadeout').click(function(){
+            $("#box").fadeOut(2000)
+        })
+
+        $('#fadein').click(function(){
+            $("#box").fadeIn(2000)
+        })
+
+        $('#toggle').click(function(){
+            $("#box").toggle(2000)
+        })
+    })
+
+    </script>
+</body>
+</html>

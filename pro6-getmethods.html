@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>get methods</title>
+</head>
+<body>
+    <!-- text()
+    html()
+    attr()
+    val() -->
+
+    <div id="box" class="text">
+        <h2>Test Box</h2>
+        <p>Lorem ipsum Lorem ipsum dolor sit amet consectetur adipisicing 
+            elit. Mollitia commodi ad dolor voluptates! Id, repudiandae.
+        </p>
+    </div>
+
+    <script src="js/jquery-3.7.1.js"></script>
+
+    <script>
+        $(document).ready(function(){
+            var a=$('#box').attr('class')
+            console.log(a)
+        })
+
+        $(document).ready(function(){
+            var a=$('#box').html()
+            console.log(a)
+        })
+
+        // $(document).ready(function(){
+        //     var a=$('#box').text('hello how are you?')
+        //     console.log(a)
+        // })
+
+        $(document).ready(function(){
+            var a=$('#box').val('h2')
+            var b=JSON.stringify(a)
+            console.log(a)
+            document.write(b)
+        })
+
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Animation Method</title>
+    <style>
+        #box{
+            width:100px;
+            height: 100px;
+            background: cyan;
+            position: relative;
+        }
+    </style>
+</head>
+<body>
+    <div id="box">ABC</div>
+    <br>
+    <button id="animatebtn">Animate</button>
+
+    <script src="js/jquery-3.7.1.js"></script>
+    <script>
+        $(document).ready(function(){
+            $('#animatebtn').click(function(){
+                $('#box').animate({left:'300'},2000)
+                $('#box').animate({borderRadius:'50%'},3000)
+                $('#box').animate({paddingLeft:'20px'},1000)
+            })
+        })
+    </script>
+    
+</body>
+</html>

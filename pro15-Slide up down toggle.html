@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Slide up down toggle</title>
+
+    <style>
+        #box{
+            padding:10px;
+            border:1px solid #000;
+            background: tan;
+
+        }
+    </style>
+</head>
+<body><div id="box">
+    <h2>Test Box</h2>
+    <p>But I must explain to you how all this mistaken idea of denouncing pleasure
+        amd praising pain was born and I will
+    </p>
+
+</div><br><br>
+
+<button id="slideupbtn">Slide Up</button>
+<button id="slidedownbtn">Slide Down</button>
+<button id="toggle">Toggle</button>
+
+
+
+<script src="./js/jquery-3.7.1.js"></script>
+<script>
+
+$(document).ready(function(){
+    $('#slideupbtn').click(function(){
+        $("#box").slideUp(2000)
+    })
+
+    $('#slidedownbtn').click(function(){
+        $("#box").slideDown(2000)
+    })
+
+    $('#toggle').click(function(){
+        $("#box").slideToggle(2000)
+    })
+})
+</script>
+</body>
+</html>
